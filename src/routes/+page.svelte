@@ -9,7 +9,7 @@
   let duration = 500
 </script>
 
-<div class="mx-auto max-w-4xl my-12 text-center space-y-8">
+<div class="mx-auto max-w-xs md:max-w-4xl my-12 text-center space-y-8">
   <div class="mx-w-4xl m-auto prose lg:prose-xl">
     <h1 class="text-6xl font-bold text-red-600">Svelte Transitions</h1>
   </div>
@@ -33,7 +33,7 @@
   </div>
 
   {#if animated}
-    <div class="grid grid-cols-4 gap-y-8">
+    <div class="grid grid-cols-3 md:grid-cols-4 gap-y-4 md:gap-y-8">
       <Fade {duration} />
       <Blur {duration} />
       <Slide {duration} axis="x" />
