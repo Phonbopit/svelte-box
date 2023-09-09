@@ -11,3 +11,6 @@ vite.config.ts.timestamp-*
 
 coverage
 test-results
+
+
+.vercel/output
