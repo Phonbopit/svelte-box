@@ -1,6 +1,7 @@
 {
-  "name": "sveltekit-tamplate",
-  "version": "0.0.2",
+  "name": "sveltekit-box",
+  "version": "0.0.1",
+  "description": "Learn Svelte",
   "private": true,
   "scripts": {
     "dev": "vite dev",
