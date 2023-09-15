@@ -34,7 +34,7 @@
   </div>
 </nav>
 
-<div class="container mx-auto max-w-xs md:max-w-4xl my-12 text-center space-y-8">
+<div class="container mx-auto max-w-xs md:max-w-4xl my-12 text-center">
   <slot />
 </div>
 
