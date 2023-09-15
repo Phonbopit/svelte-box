@@ -12,7 +12,7 @@ export default {
       },
       colors: {
         primary: colors.red,
-        secondary: colors.cyan,
+        secondary: colors.teal
       }
     }
   },
