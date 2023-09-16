@@ -39,7 +39,7 @@
   {/if}
   <button
     on:click={play}
-    class="absolute right-2 bottom-2 px-8 py-2 bg-blue-500 hover:bg-blue-400 text-white rounded-xl"
+    class="absolute right-4 bottom-4 px-8 py-2 bg-blue-500 hover:bg-blue-400 text-white rounded-xl"
     >Play</button
   >
 </div>
@@ -56,7 +56,7 @@
 
 <style lang="postcss">
   .frame {
-    @apply flex flex-col justify-center items-center h-[30rem] w-full bg-slate-50 relative my-10;
+    @apply flex flex-col justify-center items-center h-[30rem] w-full bg-slate-100 relative my-10;
   }
 
   .circle {
