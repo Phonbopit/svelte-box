@@ -7,5 +7,5 @@
 </script>
 
 <div transition:slide={{ duration, axis }}>
-  <EmptyBox name="Slide" />
+  <EmptyBox name="Slide" bg="bg-cyan-500" />
 </div>

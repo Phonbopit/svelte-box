@@ -9,13 +9,15 @@
 
   <div class="grid grid-cols-4 gap-x-2 example">
     {#each menus as menu}
-      <a href={menu.link}>{menu.name}</a>
+      <a href={menu.link} class={`${menu.bg ? menu.bg : 'bg-primary-400 hover:bg-primary-500'}`}
+        >{menu.name}</a
+      >
     {/each}
   </div>
 </div>
 
 <style lang="postcss">
   .example a {
-    @apply p-4 bg-primary-400 hover:bg-primary-500 text-white rounded-md;
+    @apply p-4 text-white rounded-md;
   }
 </style>

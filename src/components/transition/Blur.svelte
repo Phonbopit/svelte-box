@@ -6,5 +6,5 @@
 </script>
 
 <div transition:blur={{ duration, amount: 100 }}>
-  <EmptyBox name="Blur" />
+  <EmptyBox name="Blur" bg="bg-teal-500" />
 </div>

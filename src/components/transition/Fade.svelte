@@ -6,5 +6,5 @@
 </script>
 
 <div transition:fade={{ duration }}>
-  <EmptyBox name="Fade" />
+  <EmptyBox name="Fade" bg="bg-blue-500" />
 </div>

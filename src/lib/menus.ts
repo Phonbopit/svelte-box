@@ -1,4 +1,11 @@
-export const menus = [
+type Menu = {
+  id: number
+  name: string
+  link: string
+  bg?: string
+}
+
+export const menus: Array<Menu> = [
   {
     id: 1,
     name: 'Transitions',
@@ -7,7 +14,8 @@ export const menus = [
   {
     id: 2,
     name: 'Success Check ✅',
-    link: '/success-check'
+    link: '/success-check',
+    bg: 'bg-blue-500 hover:bg-blue-600'
   }
 ]
 
