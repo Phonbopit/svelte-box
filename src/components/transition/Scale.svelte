@@ -6,5 +6,5 @@
 </script>
 
 <div transition:scale={{ duration }}>
-  <EmptyBox name="Scale" />
+  <EmptyBox name="Scale" bg="bg-pink-400" />
 </div>
