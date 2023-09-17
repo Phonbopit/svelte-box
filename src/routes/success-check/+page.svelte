@@ -10,31 +10,53 @@
       visible = true
     }, 1000)
   }
+
+  function slideLine(node, { delay = 300, duration = 300, opacity = 1, rotate = 0 }) {
+    return {
+      delay,
+      duration,
+      css: (t, u) => {
+        const eased = quintOut(u)
+        return `
+          opacity: ${t * opacity};
+          transform: rotate(${rotate}deg) translate(${(1 - eased) * -0}px, ${(1 - eased) * -50}px);
+        `
+      }
+    }
+  }
 </script>
 
 <h1 class="text-6xl font-bold text-red-600 mb-4">Success Check ✅</h1>
 
-<p class="text-primary-500 text-2xl">Work in progress...........</p>
-
 <div class="frame">
   {#if visible}
-    <div class="circle" in:scale={{ duration: 700, easing: quintOut }}>
-      <!-- Check svg from https://heroicons.com/ -->
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="3"
-        stroke="white"
-        class="w-6 h-6"
-      >
-        <path
-          in:draw={{ duration: 500, delay: 200 }}
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M4.5 12.5l6 6 9-11.5"
-        />
-      </svg>
+    <div class="outer-circle">
+      <div class="circle" in:scale={{ duration: 500, easing: quintOut }}>
+        <!-- Check svg from https://heroicons.com/ -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="white"
+          class="w-6 h-6"
+        >
+          <path
+            in:draw={{ duration: 300, delay: 200 }}
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 12.5l6 6 9-11.5"
+          />
+        </svg>
+      </div>
+      <span class="line one" in:slideLine={{ rotate: 0 }}></span>
+      <span class="line two" in:slideLine={{ rotate: 45 }}></span>
+      <span class="line three" in:slideLine={{ rotate: 90 }}> </span>
+      <span class="line four" in:slideLine={{ rotate: 135 }}></span>
+      <span class="line five" in:slideLine={{ rotate: 180 }}> </span>
+      <span class="line six" in:slideLine={{ rotate: 225 }}></span>
+      <span class="line seven" in:slideLine={{ rotate: 270 }}></span>
+      <span class="line eight" in:slideLine={{ rotate: 315 }}></span>
     </div>
   {/if}
   <button
@@ -59,13 +81,54 @@
     @apply flex flex-col justify-center items-center h-[30rem] w-full bg-slate-100 relative my-10;
   }
 
+  .outer-circle {
+    @apply relative w-72 h-72 flex justify-center items-center;
+  }
+
   .circle {
-    @apply w-48 h-48 relative p-4 rounded-full bg-green-500;
+    @apply w-52 h-52 relative p-4 rounded-full bg-green-500;
+  }
+
+  .line {
+    @apply w-3 h-10 bg-green-500 rounded-md absolute opacity-0;
+  }
+
+  .line.one {
+    @apply -top-4;
+  }
+
+  .line.two {
+    @apply top-4 right-8;
+  }
+
+  .line.three {
+    @apply right-0 top-[45%];
+  }
+
+  .line.four {
+    @apply bottom-4 right-8;
+  }
+
+  .line.five {
+    @apply -bottom-4;
+  }
+
+  .line.six {
+    @apply bottom-4 left-8;
+  }
+
+  .line.seven {
+    @apply left-0 top-[45%];
+  }
+
+  .line.eight {
+    @apply left-8 top-4;
   }
 
   svg {
     width: 100%;
     height: 100%;
+    padding: 1rem;
   }
 
   path {
