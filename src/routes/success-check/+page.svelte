@@ -1,5 +1,5 @@
 <script>
-  import { draw, scale, fade } from 'svelte/transition'
+  import { draw, scale } from 'svelte/transition'
   import { quintOut } from 'svelte/easing'
 
   let visible = true
