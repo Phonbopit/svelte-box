@@ -1,5 +1,5 @@
 <script>
-  import { draw, scale } from 'svelte/transition'
+  import { draw, scale, fade } from 'svelte/transition'
   import { quintOut } from 'svelte/easing'
 
   let visible = true
@@ -20,6 +20,21 @@
         return `
           opacity: ${t * opacity};
           transform: rotate(${rotate}deg) translate(${(1 - eased) * -0}px, ${(1 - eased) * -50}px);
+        `
+      }
+    }
+  }
+
+  function fadeOut(node, { delay = 0, duration = 300, opacity = 1 }) {
+    return {
+      delay,
+      duration,
+      css: (t, u) => {
+        const eased = quintOut(u)
+
+        return `
+          opacity: ${t * opacity};
+          transform: translate(${(1 - eased) * 25}px, ${(1 - eased) * -25}px);
         `
       }
     }
@@ -48,7 +63,14 @@
             d="M4.5 12.5l6 6 9-11.5"
           />
         </svg>
+
+        <div class="bubbles">
+          <span class="bubble" in:fadeOut={{ delay: 500 }}></span>
+          <span class="bubble" in:fadeOut={{ delay: 500 }}></span>
+          <span class="bubble" in:fadeOut={{ delay: 500 }}></span>
+        </div>
       </div>
+
       <span class="line one" in:slideLine={{ rotate: 0 }}></span>
       <span class="line two" in:slideLine={{ rotate: 45 }}></span>
       <span class="line three" in:slideLine={{ rotate: 90 }}> </span>
@@ -87,6 +109,26 @@
 
   .circle {
     @apply w-52 h-52 relative p-4 rounded-full bg-green-500;
+  }
+
+  .bubbles {
+    @apply absolute w-12 h-12 flex justify-center items-center top-6 right-2;
+  }
+
+  .bubble {
+    @apply w-3 h-3 bg-white rounded-full opacity-0;
+  }
+
+  .bubble:first-child {
+    @apply absolute top-0 left-0;
+  }
+
+  .bubble:nth-child(2) {
+    @apply absolute top-1 right-2 w-5 h-5;
+  }
+
+  .bubble:nth-child(3) {
+    @apply absolute top-7 right-0;
   }
 
   .line {
