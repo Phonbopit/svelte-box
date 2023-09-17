@@ -19,7 +19,7 @@
 </svelte:head>
 
 <nav class="navbar">
-  <div class="container max-w-8xl mx-auto p-4 flex justify-between">
+  <div class="container max-w-8xl mx-auto p-4 flex justify-between items-center">
     <ul class="flex space-x-4">
       {#each menus as menu}
         <li>
@@ -42,8 +42,8 @@
         <!-- lucide github : https://lucide.dev/icons/github -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="32"
+          height="32"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
