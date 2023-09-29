@@ -54,5 +54,8 @@
     "vite": "4.4.9",
     "vitest": "0.34.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "motion": "^10.16.4"
+  }
 }

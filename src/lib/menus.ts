@@ -16,6 +16,12 @@ export const menus: Array<Menu> = [
     name: 'Success Check ✅',
     link: '/success-check',
     bg: 'bg-blue-500 hover:bg-blue-600'
+  },
+  {
+    id: 3,
+    name: 'Motion One',
+    link: '/motion-one',
+    bg: 'bg-teal-500 hover:bg-teal-600'
   }
 ]
 
