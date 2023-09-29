@@ -21,6 +21,7 @@
 <nav class="navbar">
   <div class="container max-w-8xl mx-auto p-4 flex justify-between items-center">
     <ul class="flex space-x-4">
+      <li><a href="/" class:active={isActive($page, '/')}>Home</a></li>
       {#each menus as menu}
         <li>
           <a
