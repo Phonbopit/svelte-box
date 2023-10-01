@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class={`flex justify-center items-center w-24 h-24 md:w-48 md:h-48 aspect-square ${bg} rounded-xl shadow-xl text-white`}
+  class={`flex aspect-square h-24 w-24 items-center justify-center md:h-48 md:w-48 ${bg} rounded-xl text-white shadow-xl`}
 >
   {name}
 </div>

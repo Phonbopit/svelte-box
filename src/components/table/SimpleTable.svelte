@@ -51,8 +51,8 @@
   const table = createSvelteTable(options)
 </script>
 
-<div class="container max-w-5xl mx-auto mt-4">
-  <table class="table-auto w-full border-separate border-spacing-y-8 border-2 border-slate-500">
+<div class="container mx-auto mt-4 max-w-5xl">
+  <table class="w-full table-auto border-separate border-spacing-y-8 border-2 border-slate-500">
     <thead>
       {#each $table.getHeaderGroups() as headerGroup}
         <tr>
