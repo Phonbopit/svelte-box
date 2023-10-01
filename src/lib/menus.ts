@@ -22,6 +22,12 @@ export const menus: Array<Menu> = [
     name: 'Motion One',
     link: '/motion-one',
     bg: 'bg-teal-500 hover:bg-teal-600'
+  },
+  {
+    id: 4,
+    name: 'Tanstack Table',
+    link: '/table',
+    bg: 'bg-purple-500 hover:bg-purple-600'
   }
 ]
 
