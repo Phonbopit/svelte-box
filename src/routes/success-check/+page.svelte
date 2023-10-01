@@ -41,7 +41,7 @@
   }
 </script>
 
-<h1 class="text-6xl font-bold text-red-600 mb-4">Success Check ✅</h1>
+<h1 class="mb-4 text-6xl font-bold text-red-600">Success Check ✅</h1>
 
 <div class="frame">
   {#if visible}
@@ -54,7 +54,7 @@
           viewBox="0 0 24 24"
           stroke-width="3"
           stroke="white"
-          class="w-6 h-6"
+          class="h-6 w-6"
         >
           <path
             in:draw={{ duration: 300, delay: 200 }}
@@ -83,7 +83,7 @@
   {/if}
   <button
     on:click={play}
-    class="absolute right-4 bottom-4 px-8 py-2 bg-blue-500 hover:bg-blue-400 text-white rounded-xl"
+    class="absolute bottom-4 right-4 rounded-xl bg-blue-500 px-8 py-2 text-white hover:bg-blue-400"
     >Play</button
   >
 </div>
@@ -93,46 +93,46 @@
     href="https://lottiefiles.com/animations/success-check-fill-fpiuzfu9hy-VElzIXLoyJ"
     target="_blank"
     rel="noopener"
-    class="hover:text-secondary-500 text-secondary-400 underline underline-offset-2 decoration-2"
+    class="text-secondary-400 underline decoration-2 underline-offset-2 hover:text-secondary-500"
     >Lottie - success-check-fill-FPiuzFU9Hy</a
   >
 </p>
 
 <style lang="postcss">
   .frame {
-    @apply flex flex-col justify-center items-center h-[30rem] w-full bg-slate-100 relative my-10;
+    @apply relative my-10 flex h-[30rem] w-full flex-col items-center justify-center bg-slate-100;
   }
 
   .outer-circle {
-    @apply relative w-72 h-72 flex justify-center items-center;
+    @apply relative flex h-72 w-72 items-center justify-center;
   }
 
   .circle {
-    @apply w-52 h-52 relative p-4 rounded-full bg-green-500;
+    @apply relative h-52 w-52 rounded-full bg-green-500 p-4;
   }
 
   .bubbles {
-    @apply absolute w-12 h-12 flex justify-center items-center top-6 right-2;
+    @apply absolute right-2 top-6 flex h-12 w-12 items-center justify-center;
   }
 
   .bubble {
-    @apply w-3 h-3 bg-white rounded-full opacity-0;
+    @apply h-3 w-3 rounded-full bg-white opacity-0;
   }
 
   .bubble:first-child {
-    @apply absolute top-0 left-0;
+    @apply absolute left-0 top-0;
   }
 
   .bubble:nth-child(2) {
-    @apply absolute top-1 right-2 w-5 h-5;
+    @apply absolute right-2 top-1 h-5 w-5;
   }
 
   .bubble:nth-child(3) {
-    @apply absolute top-7 right-0;
+    @apply absolute right-0 top-7;
   }
 
   .line {
-    @apply w-3 h-10 bg-green-500 rounded-md absolute opacity-0;
+    @apply absolute h-10 w-3 rounded-md bg-green-500 opacity-0;
   }
 
   .line.one {
@@ -140,7 +140,7 @@
   }
 
   .line.two {
-    @apply top-4 right-8;
+    @apply right-8 top-4;
   }
 
   .line.three {

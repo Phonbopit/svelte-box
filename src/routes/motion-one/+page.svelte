@@ -65,7 +65,7 @@
   })
 </script>
 
-<h1 class="text-6xl font-bold text-violet-400 mb-12">Motion One</h1>
+<h1 class="mb-12 text-6xl font-bold text-violet-400">Motion One</h1>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
 <div class="grid grid-cols-6">
@@ -140,7 +140,7 @@
   </div>
 </div>
 
-<section class="my-32 mx-auto overflow-x-hidden">
+<section class="mx-auto my-32 overflow-x-hidden">
   <div id="cards" class="flex">
     <div class="item bg-red-400"></div>
     <div class="item bg-blue-400"></div>
@@ -156,10 +156,10 @@
 
 <style lang="postcss">
   .box {
-    @apply w-32 h-32 bg-violet-400 rounded flex items-center justify-center text-white;
+    @apply flex h-32 w-32 items-center justify-center rounded bg-violet-400 text-white;
   }
 
   .item {
-    @apply h-32 w-24 mr-4 rounded;
+    @apply mr-4 h-32 w-24 rounded;
   }
 </style>

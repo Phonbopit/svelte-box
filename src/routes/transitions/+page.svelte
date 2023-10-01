@@ -9,12 +9,12 @@
   let duration = 500
 </script>
 
-<div class="mx-auto max-w-xs md:max-w-4xl my-12 text-center space-y-8">
-  <div class="mx-w-4xl m-auto prose lg:prose-xl">
+<div class="mx-auto my-12 max-w-xs space-y-8 text-center md:max-w-4xl">
+  <div class="mx-w-4xl prose m-auto lg:prose-xl">
     <h1 class="text-6xl font-bold text-red-600">Svelte Transitions</h1>
   </div>
 
-  <div class="block text-left mx-auto max-w-xs space-y-2">
+  <div class="mx-auto block max-w-xs space-y-2 text-left">
     <div>
       <input type="checkbox" bind:checked={animated} />
       <span class="ml-2">Toggle</span>
@@ -33,7 +33,7 @@
   </div>
 
   {#if animated}
-    <div class="grid grid-cols-3 md:grid-cols-4 gap-y-4 md:gap-y-8">
+    <div class="grid grid-cols-3 gap-y-4 md:grid-cols-4 md:gap-y-8">
       <Fade {duration} />
       <Blur {duration} />
       <Slide {duration} axis="x" />

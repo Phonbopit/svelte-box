@@ -19,14 +19,14 @@
 </svelte:head>
 
 <nav class="navbar">
-  <div class="container max-w-8xl mx-auto p-4 flex justify-between items-center">
+  <div class="max-w-8xl container mx-auto flex items-center justify-between p-4">
     <ul class="flex space-x-4">
       <li><a href="/" class:active={isActive($page, '/')}>Home</a></li>
       {#each menus as menu}
         <li>
           <a
             href={menu.link}
-            class="py-2 px-4 hover:underline decoration-wavy decoration-primary-500"
+            class="px-4 py-2 decoration-primary-500 decoration-wavy hover:underline"
             class:active={isActive($page, menu.link)}>{menu.name}</a
           >
         </li>
@@ -61,12 +61,12 @@
   </div>
 </nav>
 
-<div class="container mx-auto max-w-xs md:max-w-4xl my-12 text-center">
+<div class="container mx-auto my-12 max-w-xs text-center md:max-w-4xl">
   <slot />
 </div>
 
 <style>
   .active {
-    @apply underline underline-offset-2 decoration-wavy decoration-primary-500 text-primary-500;
+    @apply text-primary-500 underline decoration-primary-500 decoration-wavy underline-offset-2;
   }
 </style>

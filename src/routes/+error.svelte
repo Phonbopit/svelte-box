@@ -1,5 +1,5 @@
-<div class="flex justify-center items-center h-[80vh]">
-  <span class="text-4xl text-secondary-600 transition-all animate-scale"> 🤔 Page Not Found </span>
+<div class="flex h-[80vh] items-center justify-center">
+  <span class="animate-scale text-4xl text-secondary-600 transition-all"> 🤔 Page Not Found </span>
 </div>
 
 <style>
