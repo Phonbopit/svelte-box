@@ -20,7 +20,7 @@
   },
   "engines": {
     "node": "^18.12 || ^20.9",
-    "bun": ">=1.0.0"
+    "bun": ">=1.0.13"
   },
   "devDependencies": {
     "@fontsource/fredoka-one": "5.0.0",
